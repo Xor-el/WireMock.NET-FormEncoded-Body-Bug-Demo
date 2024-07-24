@@ -1,0 +1,44 @@
+{
+  "Request": {
+    "Path": {
+      "Matchers": [
+        {
+          "Name": "WildcardMatcher",
+          "Pattern": "/api/exact"
+        }
+      ]
+    },
+    "Methods": [
+      "POST"
+    ],
+    "Headers": [
+      {
+        "Name": "Content-Type",
+        "Matchers": [
+          {
+            "Name": "WildcardMatcher",
+            "Pattern": "application/x-www-form-urlencoded",
+            "IgnoreCase": true
+          }
+        ]
+      }
+    ],
+    "Body": {
+      "Matcher": {
+        "Name": "ExactMatcher",
+        "Pattern": "grant_type=client_credentials&client_id=DDCD99EE1531484E4E21D5EC9FBA5D8B&client_secret=RERDRDk5RUUxNTMxNDg0RTRFMjFENUVDOUZCQTVEOEI%3D"
+      }
+    }
+  },
+  "Response": {
+    "StatusCode": 200,
+    "BodyAsJson": {
+      "access_token": "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJjbGllbnRUeXBlIjoiU2VydmVyIiwiYXVkIjoidHJhbnNhY3Rpb24iLCJuYmYiOjE3MjE3MjU2NDMsImV4cCI6MTcyMjMzMDQ0MywiaWF0IjoxNzIxNzI1NjQzfQ.",
+      "token_type": "Bearer",
+      "expires_in": 3599
+    },
+    "Headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
