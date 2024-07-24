@@ -25,6 +25,7 @@ var client = container.CreateClient();
 
 Console.WriteLine("=================================Starting OrderedContent Tests=================================");
 
+// grant_type is first both here and in the mapping file
 var orderedContent = new FormUrlEncodedContent(
 [
     new KeyValuePair<string, string>("grant_type", "client_credentials"),
@@ -42,6 +43,7 @@ Console.WriteLine("RegexOrderedContent Response = " + regexOrderedContentRespons
 
 Console.WriteLine("=================================Starting UnOrderedContent Tests=================================");
 
+// order changed, grant_type is now last here but still first in mapping file
 var unOrderedContent = new FormUrlEncodedContent(
 [
     new KeyValuePair<string, string>("client_id", "DDCD99EE1531484E4E21D5EC9FBA5D8B"),
