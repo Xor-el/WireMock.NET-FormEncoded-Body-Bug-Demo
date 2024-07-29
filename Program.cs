@@ -41,6 +41,10 @@ var regexOrderedContentResponse = await client.PostAsync($"{publicBaseUrl}/regex
 
 Console.WriteLine("RegexOrderedContent Response = " + regexOrderedContentResponse.StatusCode);
 
+var formUrlEncodedOrderedContentResponse = await client.PostAsync($"{publicBaseUrl}/formurlencoded", orderedContent).ConfigureAwait(false);
+
+Console.WriteLine("FormUrlEncodedOrderedContent Response = " + formUrlEncodedOrderedContentResponse.StatusCode);
+
 Console.WriteLine("=================================Starting UnOrderedContent Tests=================================");
 
 // order changed, grant_type is now last here but still first in mapping file
@@ -58,6 +62,10 @@ Console.WriteLine("ExactOrderedContent Response = " + exactUnOrderedContentRespo
 var regexUnOrderedContentResponse = await client.PostAsync($"{publicBaseUrl}/regex", unOrderedContent).ConfigureAwait(false);
 
 Console.WriteLine("RegexOrderedContent Response = " + regexUnOrderedContentResponse.StatusCode);
+
+var formUrlEncodedUnOrderedContentResponse = await client.PostAsync($"{publicBaseUrl}/formurlencoded", unOrderedContent).ConfigureAwait(false);
+
+Console.WriteLine("FormUrlEncodedUnOrderedContent Response = " + formUrlEncodedUnOrderedContentResponse.StatusCode);
 
 
 await container.StopAsync();
