@@ -33,13 +33,13 @@ var orderedContent = new FormUrlEncodedContent(
     new KeyValuePair<string, string>("client_secret", "RERDRDk5RUUxNTMxNDg0RTRFMjFENUVDOUZCQTVEOEI=")
 ]);
 
-var exactOrderedContentResponse = await client.PostAsync($"{publicBaseUrl}/exact", orderedContent).ConfigureAwait(false);
+//var exactOrderedContentResponse = await client.PostAsync($"{publicBaseUrl}/exact", orderedContent).ConfigureAwait(false);
 
-Console.WriteLine("ExactOrderedContent Response = " + exactOrderedContentResponse.StatusCode);
+//Console.WriteLine("ExactOrderedContent Response = " + exactOrderedContentResponse.StatusCode);
 
-var regexOrderedContentResponse = await client.PostAsync($"{publicBaseUrl}/regex", orderedContent).ConfigureAwait(false);
+//var regexOrderedContentResponse = await client.PostAsync($"{publicBaseUrl}/regex", orderedContent).ConfigureAwait(false);
 
-Console.WriteLine("RegexOrderedContent Response = " + regexOrderedContentResponse.StatusCode);
+//Console.WriteLine("RegexOrderedContent Response = " + regexOrderedContentResponse.StatusCode);
 
 var formUrlEncodedOrderedContentResponse = await client.PostAsync($"{publicBaseUrl}/formurlencoded", orderedContent).ConfigureAwait(false);
 
@@ -55,13 +55,13 @@ var unOrderedContent = new FormUrlEncodedContent(
     new KeyValuePair<string, string>("grant_type", "client_credentials"),
 ]);
 
-var exactUnOrderedContentResponse = await client.PostAsync($"{publicBaseUrl}/exact", unOrderedContent).ConfigureAwait(false);
+//var exactUnOrderedContentResponse = await client.PostAsync($"{publicBaseUrl}/exact", unOrderedContent).ConfigureAwait(false);
 
-Console.WriteLine("ExactOrderedContent Response = " + exactUnOrderedContentResponse.StatusCode);
+//Console.WriteLine("ExactOrderedContent Response = " + exactUnOrderedContentResponse.StatusCode);
 
-var regexUnOrderedContentResponse = await client.PostAsync($"{publicBaseUrl}/regex", unOrderedContent).ConfigureAwait(false);
+//var regexUnOrderedContentResponse = await client.PostAsync($"{publicBaseUrl}/regex", unOrderedContent).ConfigureAwait(false);
 
-Console.WriteLine("RegexOrderedContent Response = " + regexUnOrderedContentResponse.StatusCode);
+//Console.WriteLine("RegexOrderedContent Response = " + regexUnOrderedContentResponse.StatusCode);
 
 var formUrlEncodedUnOrderedContentResponse = await client.PostAsync($"{publicBaseUrl}/formurlencoded", unOrderedContent).ConfigureAwait(false);
 
